@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <h1 class="head">VENUGOPAL<sub class="su">full stack developer</sub></h1>
+        </div>
+        <div class="navbar-right">
+            <a class="a-ele" href="#home">Home</a>
+            <a class="a-ele" href="#service">Projects</a>
+            <a class="a-ele" href="#services">Services</a>
+            <a class="a-ele" href="#certifications">Certifications</a>
+            <a class="a-ele" href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="home" id="home">
+        <div class="home-left">
+            <h1 class="h21">Varkala Venugopal Goud </h1>
+            <h6 class="h22"><span id="typing-text"></span><span class="cursor">|</span></h6>
+            <h3 class="h">Achieved 5⭐ in java hackerrank</h3>
+            <p class="par">With a solid academic foundation from Vardhaman College of Engineering, my focus is on applying theoretical knowledge to real-world applications.Transitioning from a diploma to complex web applications, I'm eager to expand my practical experience. My ultimate goal is to be at the forefront of computer science advancements, leveraging my skills to create impactful technological innovations.</p>
+        </div>
+        <div class="home-rig">
+            <img src="https://res.cloudinary.com/dfymbdod7/image/upload/v1747926633/Screenshot_2025-05-21_203954-modified_pyhwy3.png" class="im" alt="my-logo">
+        </div>
+    </div>
+    <div class="services" id="services">
+        <h1 class="he">SERVICES WE OFFER</h1><br>
+        <div class="sesub">
+            <div class="ser1">
+                <h1 class="sh">Web Designing</h1>
+                <p class="sp">i design the best websites with best styling.</p>
+            </div>
+            <div class="ser1">
+                <h1 class="sh">Backend Development</h1>
+                <p class="sp">i provide best backend programs according to user convenience</p>
+            </div>
+            <div class="ser1">
+                <h1 class="sh">Photo and Video Editing </h1>
+                <p class="sp">i used to service neat and classy photo and video edits</p>
+            </div>
+        </div>
+    </div>
+<section id="certifications" class="section alt">
+    <div class="cert-container">
+        <h2 class="cert-heading">Certifications & Achievements</h2>
+        <ul class="cert-list">
+            <li>✅ <strong>Full Stack Development Training</strong> – IndusTech Solutions</li>
+            <li>✅ <strong>Hands-on Django Workshop</strong> – Codetantra</li>
+            <li>🌟 <strong>5 Star in Java</strong> – HackerRank</li>
+            <li>🔗 <strong>View All Certifications</strong> on 
+                <a href="https://www.linkedin.com/in/venugopal-goud-varkala-76b282231" target="_blank">
+                    LinkedIn Profile
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+     <div class="services" id="service">
+        <h1 class="he">MY PROJECTS</h1><br>
+        <div class="sesub">
+            <div class="ser1">
+                <h1 class="sh">Student Drop-Down List</h1>
+                <p class="sp">i design the websites with best styling using html,css,python using flask,mysql.</p>
+            </div>
+            <div class="ser1">
+                <h1 class="sh">Optimized Delivery Path For Delivery Boys</h1>
+                <p class="sp">i provide best backend program according to user convenience using digikstras algorithm.</p>
+            </div>
+            <div class="ser1">
+                <h1 class="sh">Hospital Management System </h1>
+                <p class="sp">i design the websites with best styling using html,css,python using Django,mysql</p>
+            </div>
+            <div class="ser1">
+    <h1 class="sh">To-Do List App</h1>
+    <p class="sp">A simple yet functional To-Do app using HTML, CSS, JavaScript and localStorage. Helps manage daily tasks efficiently.</p>
+</div>
+
+        </div>
+    </div>
+    
+    <script>
+    const typingText = document.getElementById("typing-text");
+    const roles = ["I'm a full stack developer", "I'm a web developer"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        const currentText = roles[roleIndex];
+        const displayedText = currentText.substring(0, charIndex);
+        typingText.textContent = displayedText;
+
+        if (!isDeleting && charIndex < currentText.length) {
+            charIndex++;
+            setTimeout(typeEffect, 100);
+        } else if (isDeleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(typeEffect, 50);
+        } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) {
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+            setTimeout(typeEffect, 1000); // pause before switching
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        typeEffect();
+    });
+</script>
+<section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+     <form action="https://formspree.io/f/xovdgwkg" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required="">
+        <input type="email" name="_replyto" placeholder="Your Email" required="">
+        <textarea name="message" rows="5" placeholder="Your Message" required=""></textarea>
+        <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+<footer>
+    <div class="container">
+      <p>📧 venugopal.v0308@gmail.com | 📞 +91 62818 29003</p>
+      <p>📍 Ameerpet, Telangana | 
+        <div class="social-icons">
+    <a href="https://www.instagram.com/venuugopal_goud?igsh=dmNoNmV1aGxqZXk3" target="_blank">
+        <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" width="40" height="40">
+    </a>
+    <a href="https://www.linkedin.com/in/venugopal-goud-varkala-76b282231/" target="_blank">
+        <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="LinkedIn" width="40" height="40">
+    </a>
+    <a href="https://github.com/Venugopal0308" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/github.png" alt="GitHub" width="40" height="40">
+    </a>
+</div>
+
+
+
+    </p>
+      <p>© 2025 Varkala Venugopal Goud</p>
+    </div>
+  </footer>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    emailjs.init('YOUR_USER_ID');
+</script>
+
+</body>
+</html>
